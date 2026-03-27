@@ -1,0 +1,140 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  z-index: 1030;
+  padding: 0.5rem 0;
+}
+
+.main-content {
+  padding-top: 90px; 
+  padding-bottom: 3rem;
+}
+
+/* NAVBAR  */
+.navbar-search {
+  width: 220px;
+  background-color: #f1f3f5 !important;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.navbar-search:focus {
+  width: 280px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+  outline: none;
+}
+
+.nav-icon-wrapper {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.nav-icon-wrapper:hover { opacity: 0.7; }
+
+.custom-profile-btn {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-profile-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2) !important;
+}
+
+.custom-profile-btn::after { display: none !important; }
+
+/* --- 3. ANIMATIONS --- */
+.pulse-animation {
+  animation: pulse-red 2s infinite;
+}
+
+/* Welcome Banner */
+.bg-aureum {
+  background: linear-gradient(135deg, #0d1b4a 0%, #311b92 100%) !important;
+  position: relative;
+  z-index: 1;
+}
+
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.transition-all:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+@keyframes pulse-red {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(220, 53, 69, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+/* --- 4. STAT CARDS --- */
+.stat-card-base {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer;
+}
+
+.stat-card-base:hover {
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  background-color: #d3c6c6 !important;
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* QUICK ACTIONS */
+.quick-actions-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) { .quick-actions-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1200px) { .quick-actions-grid { grid-template-columns: repeat(8, 1fr); } }
+
+.btn-gradient {
+  border: none !important;
+  min-height: 110px;
+  justify-content: center;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  color: white !important;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* GRADIENTS */
+.grad-blue    { background: linear-gradient(135deg, #79a3e0 0%, #26569e 100%); }
+.grad-red     { background: linear-gradient(135deg, #c77079 0%, #a52834 100%); }
+.grad-green   { background: linear-gradient(135deg, #77cca4 0%, #0f5132 100%); }
+.grad-purple  { background: linear-gradient(135deg, #9b80cc 0%, #432874 100%); }
+.grad-orange  { background: linear-gradient(135deg, #c7ac7c 0%, #d97706 100%); }
+.grad-cyan    { background: linear-gradient(135deg, #7bb9c5 0%, #0aa2c0 100%); }
+.grad-dark    { background: linear-gradient(135deg, #91a8be 0%, #212529 100%); }
